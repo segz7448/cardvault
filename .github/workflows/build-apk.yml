@@ -29,7 +29,7 @@ jobs:
 
       - name: Eject Expo to get android folder
         working-directory: admin-apk
-        run: npx expo eject --non-interactive
+        run: CI=1 npx expo prebuild --platform android --non-interactive
 
       - name: Write Supabase config
         working-directory: admin-apk
